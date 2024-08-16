@@ -10,8 +10,8 @@ setuptools.setup(
     url="https://eol.uchile.cl",
     packages=setuptools.find_packages(),
     install_requires=[
-        "eolcourseprogram-xblock @ git+https://github.com/eol-uchile/eol-course-program-xblock@0.1.1#egg=eolcourseprogram-xblock",
-        "eol_sso_login @ git+https://github.com/eol-uchile/eol_sso_login@0.0.1#egg=eol_sso_login"
+        "eolcourseprogram-xblock @ git+https://github.com/eol-uchile/eol-course-program-xblock@0.1.1#egg=eolcourseprogram-xblock==0.1.1",
+        "eol_sso_login @ git+https://github.com/eol-uchile/eol_sso_login@0.0.1#egg=eol_sso_login==0.0.1"
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
