@@ -18,16 +18,7 @@ To use the certificate-related context extensions provided by context-extender, 
 ## Installation
 
 1. **Install the App**:  
-   Add the `context-extender` app to your Open edX platform by including it in your requirements file or by directly placing it in your project’s apps directory.
-
-2. **Add to `INSTALLED_APPS`**:  
-   Ensure that `context_extender` is included in the `INSTALLED_APPS` setting of your Open edX project:
-
-   ```python
-   INSTALLED_APPS += [
-       'context_extender',
-   ]
-   ```
+   Add the `context-extender` app to your Open edX platform by including it in your requirements file.
 
 ## Configuration
 
