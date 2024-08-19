@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="context_extender",
-    version="0.0.3",
+    version="0.0.4",
     author="Oficina EOL UChile",
     author_email="eol-ing@uchile.cl",
     description="A context extension tool for Open edX.",
