@@ -2,7 +2,7 @@
 
 from django.apps import AppConfig
 from openedx.core.djangoapps.plugins.constants import PluginSettings, PluginURLs, ProjectType, SettingsType
-from django.conf import settings
+from .settings import common
 import logging
 
 logger = logging.getLogger(__name__)

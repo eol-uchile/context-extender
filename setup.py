@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="context_extender",
-    version="0.0.2",
+    version="0.0.3",
     author="Oficina EOL UChile",
     author_email="eol-ing@uchile.cl",
     description="A context extension tool for Open edX.",
@@ -10,8 +10,8 @@ setuptools.setup(
     url="https://eol.uchile.cl",
     packages=setuptools.find_packages(),
     install_requires=[
-        "eolcourseprogram-xblock @ git+https://github.com/eol-uchile/eol-course-program-xblock@0.1.1#egg=eolcourseprogram-xblock",
-        "eol_sso_login @ git+https://github.com/eol-uchile/eol_sso_login@0.0.1#egg=eol_sso_login"
+        "eolcourseprogram-xblock @ https://github.com/eol-uchile/eol-course-program-xblock/archive/refs/tags/0.1.1.zip",
+        "eol_sso_login @ https://github.com/eol-uchile/eol_sso_login/archive/refs/tags/0.0.3.zip"
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
