@@ -2,6 +2,8 @@
 
 set -e
 
+pip install -e git+https://github.com/eol-uchile/eol-course-program-xblock@0.1.1#egg=eolcourseprogram-xblock
+pip install -e git+https://github.com/eol-uchile/eol_sso_login@0.0.3#egg=eol_sso_login
 pip install -e /openedx/requirements/app
 
 cd /openedx/requirements/app
