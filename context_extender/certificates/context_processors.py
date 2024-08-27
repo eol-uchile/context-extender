@@ -31,9 +31,11 @@ def add_student_program_grade(request):
                 logger.info(f"Extracted course_id and user_id from certificate with UUID {verification_uuid}: course_id - {course_id}, user_id - {user_id}")
             except GeneratedCertificate.DoesNotExist:
                 logger.warning(f"No certificate found with UUID {verification_uuid}")
+                return context
         else:
             # Extract course_id from resolver_match kwargs as a fallback
             logger.warning(f"No certificate found with UUID {verification_uuid}")
+            return context
 
         # Fetch the student's grade if we have a course_id
         if course_id and user_id:
@@ -86,9 +88,11 @@ def add_student_grade(request):
                 logger.info(f"Extracted course_id from certificate with UUID {verification_uuid}: {course_id}")
             except GeneratedCertificate.DoesNotExist:
                 logger.warning(f"No certificate found with UUID {verification_uuid}")
+                return context
         else:
             # Extract course_id from resolver_match kwargs as a fallback
             logger.warning(f"No certificate found with UUID {verification_uuid}")
+            return context
 
         # Fetch the student's grade if we have a course_id
         if course_id:
@@ -115,9 +119,11 @@ def add_student_document(request):
                 logger.info(f"Extracted user_id from certificate with UUID {verification_uuid}: user_id - {user_id}")
             except GeneratedCertificate.DoesNotExist:
                 logger.warning(f"No certificate found with UUID {verification_uuid}")
+                return context
         else:
             # Extract course_id from resolver_match kwargs as a fallback
             logger.warning(f"No certificate found with UUID {verification_uuid}")
+            return context
         # Get the current view name
         current_view_name = resolve(request.path_info).url_name        
         # Fetch additional data from eol_sso_login_ssologinextradata
@@ -129,5 +135,6 @@ def add_student_document(request):
             logger.info(f"Context updated with extra data: document={extra_data.document}, type_document={extra_data.type_document}")
         except SSOLoginExtraData.DoesNotExist:
             logger.warning(f"No extra data found for user_id {user_id}")
+            return context
     
     return context
